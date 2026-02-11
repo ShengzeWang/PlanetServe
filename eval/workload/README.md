@@ -165,7 +165,10 @@ fig_<dataset>_<interval>/*.png
 
 ```bash
 pip install - U gdown
-gdwon --id 1RDFIjcAnXS59gcg5-bjtwc4uM1f3JSmm
+gdown --id 1-rGxkhW8n7L2NplP4HW29i0sf9xeo0eZ # toolbech.jsonl
+gdown --id 1YGa6EMi0mEhpvWIGjLzFfzquBkALC22f # mixed.josnl
+gdown --id 1z1hGA8cLza7gFO-g-6QgeVQJrX7Mu5xx # loogle.jsonl
+gdown --id 1cZJzqYcSKBiuzEE1yz0u_4_hUy0KvCtk # aaps.jsonl
 ```
  
  In a future release, we plan to package this environment as a container image to make deployment easier and enable more portable, broader experiments across different machines and clusters.
