@@ -37,10 +37,12 @@ sudo apt install -y \
     cmake \
     libssl-dev \
     libzmq3-dev \
-    nlohmann-json3-dev
+    nlohmann-json3-dev \
+    libcurl4-openssl-dev \
+    pkg-config
 git submodule update --init --recursive
 
-cd ../deps/llama.cpp
+cd ./deps/llama.cpp
 git checkout 0fd8487b1
 
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
@@ -54,13 +56,14 @@ sudo apt-get update
 sudo apt-get install -y openjdk-17-jdk
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export PATH="$JAVA_HOME/bin:$PATH"
-
 ```
+
 Use CPU by default for local test.
 
 #### Model Download
 
 ```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install huggingface-cli
 cd ../..
 mkdir -p models && cd models
