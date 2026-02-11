@@ -41,12 +41,20 @@ sudo apt install -y \
 git submodule update --init --recursive
 
 cd ../deps/llama.cpp
-cmake -S . -B build \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DLLAMA_BUILD_TESTS=OFF \
-  -DLLAMA_BUILD_EXAMPLES=OFF
-cmake --build build -j
+git checkout 0fd8487b1
+
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+  -DLLAMA_BUILD_SERVER=ON \
+  -DLLAMA_BUILD_EXAMPLES=ON \
+  -DGGML_BUILD_EXAMPLES=OFF
+cmake --build build -j$(nproc)
 cd ../../
+
+sudo apt-get update
+sudo apt-get install -y openjdk-17-jdk
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH="$JAVA_HOME/bin:$PATH"
+
 ```
 Use CPU by default for local test.
 

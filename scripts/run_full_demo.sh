@@ -18,7 +18,7 @@ CONFIG_FILE="$PROJECT_DIR/configs/demo_local.yaml"
 # Paths
 MODEL_PATH="$PROJECT_DIR/models/Llama-3.2-1B-Instruct-Q4_K_M.gguf"
 TENDERMINT_DIR="$PROJECT_DIR/planetllm_tendermint"
-
+LLAMA_SERVER_BIN="$PROJECT_DIR/deps/llama.cpp/build/bin/llama-server"
 # Ports
 LLAMA_SERVER_PORT=8080
 TENDERMINT_PORT=26657
@@ -143,7 +143,7 @@ start_llama_server() {
     check_model
     
     log_info "Starting llama-server on port $LLAMA_SERVER_PORT..."
-    nohup llama-server \
+    nohup "$LLAMA_SERVER_BIN" \
         -m "$MODEL_PATH" \
         --port "$LLAMA_SERVER_PORT" \
         --ctx-size 2048 \

@@ -185,9 +185,16 @@ public:
             // Top-level sections (no indentation or minimal)
             if (indent == 0) {
                 // Save current path if we were building one
-                if (in_relay_paths && !current_path.hops.empty()) {
-                    config.relay_paths.push_back(current_path);
-                    current_path = RelayPath();
+                if (in_relay_paths) {
+                    // Flush pending hop first
+                    if (current_hop.port > 0 && !current_hop.ip.empty()) {
+                        current_path.hops.push_back(current_hop);
+                        current_hop = RelayHop();
+                    }
+                    if (!current_path.hops.empty()) {
+                        config.relay_paths.push_back(current_path);
+                        current_path = RelayPath();
+                    }
                 }
                 in_relay_paths = false;
                 in_hops = false;

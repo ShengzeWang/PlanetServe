@@ -10,7 +10,6 @@ sh/
 eval/renew_lb/logs
 eval/renew_lb/HashRadixTree/__pycache__
 mayneed/
-tests/test_sida.cpp
 todo.md
 note.md
 logs/
