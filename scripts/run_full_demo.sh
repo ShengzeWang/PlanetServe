@@ -21,7 +21,7 @@ TENDERMINT_DIR="$PROJECT_DIR/planetllm_tendermint"
 LLAMA_SERVER_BIN="$PROJECT_DIR/deps/llama.cpp/build/bin/llama-server"
 # Ports
 LLAMA_SERVER_PORT=8080
-TENDERMINT_PORT=26657
+TENDERMINT_PORT=26658
 MODEL_NODE_PORT=9000
 VERIFIER_PORT=9100
 USER_PORT=9200
@@ -358,7 +358,7 @@ run_e2e_test() {
     
     # Start new epoch in Tendermint
     log_info "Starting new epoch in Tendermint..."
-    curl -s -X POST "http://localhost:$LLAMA_SERVER_PORT/../tx" \
+    curl -s -X POST "http://localhost:$TENDERMINT_PORT/tx" \
         -H "Content-Type: application/json" \
         -d '{"type":"start_epoch"}' 2>/dev/null || true
     
@@ -382,7 +382,7 @@ run_e2e_test() {
         # 4. Submit result to Tendermint for BFT consensus
         OUTPUT=$("$BUILD_DIR/demo_verifier_node" \
             --config "$CONFIG_FILE" \
-            --tendermint "localhost:$LLAMA_SERVER_PORT" \
+            --tendermint "localhost:$TENDERMINT_PORT" \
             --challenge "$CHALLENGE" 2>&1) || true
         
         # Parse output
@@ -418,7 +418,7 @@ run_e2e_test() {
     
     # Query Tendermint for final reputations
     log_info "Querying Tendermint for reputation status..."
-    curl -s "http://localhost:$LLAMA_SERVER_PORT/../query?path=reputations" 2>/dev/null || echo "  (Tendermint query not available)"
+    curl -s "http://localhost:$TENDERMINT_PORT/query?path=reputations" 2>/dev/null || echo "  (Tendermint query not available)"
     
     echo ""
     echo "✓ E2E test with BFT consensus completed"
@@ -431,7 +431,7 @@ run_quick_test() {
     echo ""
     "$BUILD_DIR/demo_verifier_node" \
         --config "$CONFIG_FILE" \
-        --tendermint "localhost:$LLAMA_SERVER_PORT" \
+        --tendermint "localhost:$TENDERMINT_PORT" \
         --challenge "$CHALLENGE"
 }
 
