@@ -1,14 +1,14 @@
-## PlanetServe: A Decentralized, Scalable, and Privacy-Preserving Overlay for Democratizing Large Language Model Serving 
+## 🪐PlanetServe
 
 <p align="center">
   <a href="https://secartifacts.github.io/usenixsec2025/badges">
-    <img src="https://secartifacts.github.io/images/usenixbadges-available.svg" alt="USENIX AE: Artifacts Available" height="72">
-  </a>
+    <img src="https://secartifacts.github.io/images/usenixbadges-available.svg" height="72" style="display:inline-block;">
+  </a>&nbsp;&nbsp;&nbsp;
   <a href="https://secartifacts.github.io/usenixsec2025/badges">
-    <img src="https://secartifacts.github.io/images/usenixbadges-functional.svg" alt="USENIX AE: Artifacts Functional" height="72">
-  </a>
+    <img src="https://secartifacts.github.io/images/usenixbadges-functional.svg" height="72" style="display:inline-block;">
+  </a>&nbsp;&nbsp;&nbsp;
   <a href="https://secartifacts.github.io/usenixsec2025/badges">
-    <img src="https://secartifacts.github.io/images/usenixbadges-reproduced.svg" alt="USENIX AE: Results Reproduced" height="72">
+    <img src="https://secartifacts.github.io/images/usenixbadges-reproduced.svg" height="72" style="display:inline-block;">
   </a>
 </p>
 
