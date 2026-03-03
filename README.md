@@ -1,10 +1,8 @@
 ## 🪐PlanetServe
 
-<p align="center">
-  <a href="https://secartifacts.github.io/usenixsec2025/badges"><img src="https://secartifacts.github.io/images/usenixbadges-available.svg" height="72"></a>
-  <a href="https://secartifacts.github.io/usenixsec2025/badges"><img src="https://secartifacts.github.io/images/usenixbadges-functional.svg" height="72"></a>
-  <a href="https://secartifacts.github.io/usenixsec2025/badges"><img src="https://secartifacts.github.io/images/usenixbadges-reproduced.svg" height="72"></a>
-</p>
+[![Artifacts Available](https://img.shields.io/badge/Artifacts-Available-%23F39C12)](https://secartifacts.github.io/usenixsec2025/badges)
+[![Artifacts Functional](https://img.shields.io/badge/Artifacts-Functional-%233498DB)](https://secartifacts.github.io/usenixsec2025/badges)
+[![Artifacts Reusable](https://img.shields.io/badge/Artifacts-Reusable-%239B59B6)](https://secartifacts.github.io/usenixsec2025/badges)
 
 Welcome to **PlanetServe**, an Open LLM serving overlay that harnesses computing resources from decentralized contributors.
 
