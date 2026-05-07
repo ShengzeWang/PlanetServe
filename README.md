@@ -3,7 +3,9 @@
 [![Artifacts Available](https://img.shields.io/badge/Artifacts-Available-%23F39C12)](https://secartifacts.github.io/usenixsec2025/badges)
 [![Artifacts Functional](https://img.shields.io/badge/Artifacts-Functional-%233498DB)](https://secartifacts.github.io/usenixsec2025/badges)
 [![Artifacts Reproduced](https://img.shields.io/badge/Artifacts-Reproduced-%239B59B6)](https://secartifacts.github.io/usenixsec2025/badges)
+
 📄 **Paper:** [PlanetServe](https://www.usenix.org/system/files/nsdi26-fang.pdf)
+
 Welcome to **PlanetServe**, an open LLM serving overlay that harnesses computing resources from decentralized contributors.
 
 ## 📃 Overview
