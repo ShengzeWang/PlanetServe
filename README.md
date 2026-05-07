@@ -3,8 +3,8 @@
 [![Artifacts Available](https://img.shields.io/badge/Artifacts-Available-%23F39C12)](https://secartifacts.github.io/usenixsec2025/badges)
 [![Artifacts Functional](https://img.shields.io/badge/Artifacts-Functional-%233498DB)](https://secartifacts.github.io/usenixsec2025/badges)
 [![Artifacts Reproduced](https://img.shields.io/badge/Artifacts-Reproduced-%239B59B6)](https://secartifacts.github.io/usenixsec2025/badges)
-
-Welcome to **PlanetServe**, an Open LLM serving overlay that harnesses computing resources from decentralized contributors.
+📄 **Paper:** [PlanetServe](https://www.usenix.org/system/files/nsdi26-fang.pdf)
+Welcome to **PlanetServe**, an open LLM serving overlay that harnesses computing resources from decentralized contributors.
 
 ## 📃 Overview
 
@@ -69,21 +69,15 @@ Each directory includes its own `README.md` with detailed documentation.
 If you use PlanetServe in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{fang2026planetserve,
-  title     = {PlanetServe: A Decentralized, Scalable, and Privacy-Preserving Overlay for Democratizing Large Language Model Serving},
-  author    = {Fang, Fei and Hua, Yifan and Wang, Shengze and Zhou, Ruilin and Liu, Yi and Qian, Chen and Zhang, Xiaoxue},
-  booktitle = {Proceedings of the 23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI '26)},
-  year      = {2026},
-  address   = {Renton, WA, USA},
-  month     = may,
-}
-
-@misc{fang2025planetserve_arxiv,
-  title         = {PlanetServe: A Decentralized, Scalable, and Privacy-Preserving Overlay for Democratizing Large Language Model Serving},
-  author        = {Fang, Fei and Hua, Yifan and Wang, Shengze and Zhou, Ruilin and Liu, Yi and Qian, Chen and Zhang, Xiaoxue},
-  year          = {2025},
-  eprint        = {2504.20101},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.DC},
-  doi           = {10.48550/arXiv.2504.20101}
+@inproceedings {316600,
+author = {Fei Fang and Yifan Hua and Shengze Wang and Ruilin Zhou and Yi Liu and Chen Qian and Xiaoxue Zhang},
+title = {{PlanetServe}: A Decentralized, Scalable, and {Privacy-Preserving} Overlay for Democratizing Large Language Model Serving},
+booktitle = {23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI 26)},
+year = {2026},
+isbn = {978-1-939133-54-0},
+address = {Renton, WA},
+pages = {2111--2129},
+url = {https://www.usenix.org/conference/nsdi26/presentation/fang},
+publisher = {USENIX Association},
+month = may
 }
